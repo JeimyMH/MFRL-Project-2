@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1024px;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100 300 400 100 300 400;
+  font-style: normal italic;
+  letter-spacing: .05em;
+  background-color: #678e07;
+  color: black;
+  padding: 25px
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+h1, .top-nav {
+  text-align: center;
+}
+
+.top-nav, .top-nav li {
+  width: 100%;
+ }
+
+h1 a, .top-nav a {
+  color: #000;
+}
+
+.top-nav li {
+  padding: 10px 0;
+  margin: 5px auto;
+  background-color: #fff;
+}
+
+.top-nav a {
+  text-transform: uppercase;
+}
+
+
+.professional {
+margin-top: 1.5%;
+}
+
+.portfolio {
+margin-top: 1.5%;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 10px
+  display:flex:
+  margin: auto 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.col {
+margin: 10px
+  min-height: 250px;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  vertical-align::after
+}
+.box-1 {
+  background-color: #093145;
+}
+
+.box-2 {
+  background-color: #3C6478;
+}
+
+.box-3 {
+  background-color: #107896;
+}
+
+.box-4 {
+  background-color: #829356;
+}
+
+.box-5 {
+  background-color: #C2571A;
+}
+
+.box-6 {
+  background-color: #9A2617;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 0 20px;
+  height: 100px;
+  background-color: #107896;
+}
+
+.footer-nav {
+  display: flex;
+  text-transform: uppercase;
+}
+.full {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .top-nav {
+    margin-top: 0;
+  }
+
+  .top-nav li {
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+    background-color: transparent;
+  }
+
+  .top-nav li:last-child {
+    margin-right: 0;
+  }
+
+  .top-nav a {
+    color: #fff;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    flex-basis: calc(50% - 20px);
+     }
+  .top {
+    display: none;
+  }
+  .full {
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-nav, 
+  .top-nav li {
+    width: initial;
+    margin-bottom: 0;
+  }
+  .col {
+    flex-basis: calc(33.333% - 20px);
+   }
+
+   .my info{
+    margin-top: 2.0%;
+    text-align: center;
+    }
+
+    .contact {
+      width: 100%;
+      margin-top: 1.5%;
+      margin-bottom: 1.5%;
+      text-align: center;
+      color: #000;
+      }
+
+}
+
