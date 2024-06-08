@@ -1,19 +1,18 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing:border-box;
+  margin: 0 auto; 
+  max-width: 1024px;
 }
 
 body {
   max-width: 1024px;
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
-  font-weight: 100 300 400 100 300 400;
-  font-style: normal italic;
+  font-weight:500;
+  font-style:normal;
   letter-spacing: .05em;
-  background-color: #678e07;
-  color: black;
-  padding: 25px
+  background-color: powderblue;
+  padding: 25px;
 }
 
 ul {
@@ -24,103 +23,137 @@ ul {
 a {
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
 }
 
 h1, .top-nav {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .top-nav, .top-nav li {
   width: 100%;
- }
+  margin-bottom: 2rem;
+}
 
 h1 a, .top-nav a {
-  color: #000;
+  color: ghostwhite;
 }
 
 .top-nav li {
   padding: 10px 0;
   margin: 5px auto;
-  background-color: #fff;
+  background-color: #206777;
 }
 
 .top-nav a {
   text-transform: uppercase;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
 
-.professional {
-margin-top: 1.5%;
+.bio {
+  margin-top: 1.5%;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .portfolio {
-margin-top: 1.5%;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .container {
   max-width: 1100px;
-  padding: 10px
-  display:flex:
+  display:flex;
+  flex-direction: column;
   margin: auto 0;
   font-family: "Roboto", sans-serif;
+  gap: 15px;
+  margin-bottom: 15%;
 }
 
-.col {
-margin: 10px
-  min-height: 250px;
-  color: white;
+.project-images {
+  width: 100%;
+}
+
+.card {
+  min-height: 150px;
+  color: ghostwhite;
   text-align: center;
   letter-spacing: 1px;
-  padding-top: 10px;
-  vertical-align::after
+  padding-top: 20px;
+  flex: 1 1 auto;
 }
+
 .box-1 {
-  background-color: #093145;
+  background-color: #206777;
 }
 
 .box-2 {
-  background-color: #3C6478;
+  background-color: #206777;
 }
 
 .box-3 {
-  background-color: #107896;
+  background-color: #206777;
 }
 
 .box-4 {
-  background-color: #829356;
+  background-color: #206777;
 }
 
 .box-5 {
-  background-color: #C2571A;
+  background-color: #206777;
 }
 
 .box-6 {
-  background-color: #9A2617;
+  background-color: #206777;
+}
+
+#contact {
+  text-align: center;
+}
+
+.contact {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.phone {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.email {
+  margin-bottom: 2rem;
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
+  display:flex;
   align-items: center;
-  margin-top: auto;
-  padding: 0 20px;
-  height: 100px;
-  background-color: #107896;
+  height: 80px;
+  background-color: #206777;
+  padding: 0;
 }
 
-.footer-nav {
-  display: flex;
-  text-transform: uppercase;
+.footer-nav a {
+  color:ghostwhite;
+}  
+
+.tablet-footer-nav {
+  display: none;
 }
+
 .full {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .top-nav {
-    margin-top: 0;
-  }
 
   .top-nav li {
     display: inline-block;
@@ -134,54 +167,106 @@ footer {
   }
 
   .top-nav a {
-    color: #fff;
+    color: #165765;
   }
+
+ .profile-bio {
+    display: flex;
+    flex-direction:row-reverse;
+    margin-bottom: 2rem;
+    gap: 3rem;
+  }
+
+  .image-container{
+    width: 200%;
+  }
+
+  .bio {
+    text-align: left;
+  }
+
+  .portfolio {
+    margin-bottom: 2rem;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 3rem;
+  }
+  
+  .card {
+    flex-basis: calc(50% - 20px);
   }
 
-  .col {
-    flex-basis: calc(50% - 20px);
-     }
-  .top {
-    display: none;
-  }
   .full {
     display: inline-block;
     margin-left: 20px;
   }
 
+  .footer-nav {
+    display:flex;
+    gap: 1rem;
+  }
+
+  footer {
+    gap: 20rem;
+  }
+
+  .mobile-footer-nav {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
+   
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:flex;
   }
 
-  .top-nav, 
-  .top-nav li {
-    width: initial;
-    margin-bottom: 0;
+  h1 {
+    text-align:left;
+    text-wrap: nowrap;
   }
-  .col {
+
+  .top-nav {
+    text-align: end;
+  }
+ 
+  .profile-bio {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 140%;
+    gap: 10rem;
+  }
+
+  .portfolio {
+    margin-bottom: 3rem;
+  }
+
+  .card {
     flex-basis: calc(33.333% - 20px);
    }
 
-   .my info{
+  .my info {
     margin-top: 2.0%;
     text-align: center;
-    }
+  }
 
-    .contact {
-      width: 100%;
-      margin-top: 1.5%;
-      margin-bottom: 1.5%;
-      text-align: center;
-      color: #000;
-      }
+  .contact {
+    width: 100%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    text-align: center;
+    color: #000;
+  }
 
-}
+  footer {
+    gap: 35rem;
+  }
 
+  .full {
+    display: none;
+  }
+}   
